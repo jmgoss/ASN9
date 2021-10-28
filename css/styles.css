@@ -1,0 +1,160 @@
+
+/* Global Styles */
+
+html {
+    box-sizing:border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+img{
+    width: 300px;
+}
+h1{
+    font-family: 'Comfortaa', cursive;
+    font-size: 50px;
+}
+/* Navbar */
+
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.6fr 1.3fr 1.3fr 1.3fr 0.5fr; 
+    grid-gap: 1fr; 
+    grid-template-areas: 
+      "navbar navbar navbar name"
+      "content-logo images images images"
+      "content-brand images images images"
+      "content-poster images images images"
+      "footer footer footer footer"; 
+  }
+
+
+.navbar { 
+    grid-area: navbar;
+    }
+    nav {
+        font-size: 18px;
+         }
+    nav ul li{
+        position: relative;
+        list-style: none;
+        display: inline-block;
+    }
+    nav ul li a{
+        display: block;
+        padding: 0 25px;
+        color: black;
+        text-decoration: none;
+        line-height: 60px;  
+    }
+    nav ul li a:hover{
+        background:#aedfe6;
+        border-radius: 5em;
+    }
+.name { 
+    grid-area: name; 
+}
+  .content-logo {
+    justify-self: stretch; 
+    grid-area: content-logo; 
+    padding: 0px 0px 0px 60px;
+    text-decoration: underline;
+  }
+  .content-poster {
+    grid-area: content-poster; 
+    padding: 0px 0px 0px 60px;
+    text-decoration: underline;
+}
+  .content-brand { 
+    grid-area: content-brand; 
+    padding: 0px 0px 0px 60px;
+    text-decoration: underline;
+}
+  .images {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-gap: 60px 20px; 
+    grid-template-areas: 
+      "image-1 image-2 image-3"
+      "image-4 image-5 image-6"
+      "image-7 image-8 image-9"; 
+    grid-area: images; 
+  }
+    .image-1 { 
+      grid-area: image-1; 
+    }
+
+  .image-2 { 
+      grid-area: image-2;
+}
+  .image-3 { 
+      grid-area: image-3; 
+}
+  .image-4 { 
+      grid-area: image-4; 
+}
+  .image-5 { 
+      grid-area: image-5; 
+}
+  .image-6 { 
+      grid-area: image-6; 
+}
+  .image-7 { 
+      grid-area: image-7; 
+}
+  .image-8 { 
+      grid-area: image-8; 
+}
+  .image-9 { 
+      grid-area: image-9;
+}
+
+  .footer { grid-area: footer; }
+
+  @media only screen and (max-width:550px){
+        .container{
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.4fr 0.4fr .4fr .4fr;
+            grid-template-areas: 
+            "name"
+            "navbar"
+            "content-logo"
+            "content-brand"
+            "content-poster"
+            "images"
+            "footer"
+            ;
+        }
+        .images{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "image-1"
+            "image-2"
+            "image-3"
+            "image-4"
+            "image-5"
+            "image-6"
+            "image-7"
+            "image-8"
+            "image-9";
+        }
+        h1{
+            text-align: center;
+        }
+        nav ul li a{
+            text-align: center;
+            padding: 0 10px;
+        }
+  }
+      
+  
